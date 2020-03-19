@@ -1,5 +1,5 @@
-﻿#include <stdio.h>
-#include <pch.h>
+#include <stdio.h>
+//#include <pch.h>
 #include <iostream>
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -14,33 +14,33 @@ float x[100];
 int n, iter;
 int i, j, k;
 
-void main()
+int main()
 {
 
 	printf("Rozwiązanie układu równań liniowych Metoda Gaussa-Seidela\n");
 	printf("Rozwiazywanie ukladu n-rownan z n-niewiadomymi Ax=b\n");
 	printf("Podaj n\n");
-	scanf_s("%d", &n);
+	scanf("%d", &n);
 	if ((n < 1) && (n > 100)) {
 		printf("Nieprawidlowa warosc parametru n\n");
-		return;
+		return 0;
 	}
 
 
 	for (i = 0; i < n; i++)
 		for (j = 0; j < n; j++) {
 			printf("A[%d][%d] = ", (i + 1), (j + 1));
-			scanf_s("%f", &A[i][j]);
+			scanf("%f", &A[i][j]);
 			if ((i == j) && (A[i][j] == 0)) {
 				printf("Wartosci na przekatnej musza byc rozne od 0\n");
-				return;
+				return 0;
 			}
 		}
 
 
 	for (i = 0; i < n; i++) {
 		printf("b[%d] = ", (i + 1));
-		scanf_s("%f", &b[i]);
+		scanf("%f", &b[i]);
 	}
 
 
@@ -80,7 +80,7 @@ void main()
 		x[i] = 0;
 
 	printf("Ile iteracji algorytmu wykonac?\n");
-	scanf_s("%d", &iter);
+	scanf("%d", &iter);
 
 	for (k = 0; k < iter; k++)
 		for (i = 0; i < n; i++) {
@@ -94,6 +94,7 @@ void main()
 			for (i = 0; i < n; i++)
 				printf("x[%d] = %f\n", (i + 1), x[i]);
 
-			return;
+			return 0;
 
 		}
+}
