@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const double eps = 1e-12; // sta³a przybli¿enia zera
+const double eps = 1e-12; // staÂ³a przybliÂ¿enia zera
 
 // Funkcja realizuje algorytm eliminacji Gaussa
 bool gauss(int n, double** AB, double* X)
@@ -13,7 +13,7 @@ bool gauss(int n, double** AB, double* X)
 	int i, j, k;
 	double m, s;
 
-	// eliminacja wspó³czynników
+	// eliminacja wspÃ³Â³czynnikÃ³w
 
 	for (i = 0; i < n - 1; i++)
 	{
@@ -46,9 +46,9 @@ int main()
 
 	cout << setprecision(4) << fixed;
 
-	// odczytujemy liczbê niewiadomych
+	// odczytujemy liczbÃª niewiadomych
 
-	cout << "Podaj liczbê niewiadomych: ";
+	cout << "Podaj liczbÃª niewiadomych: ";
 	cin >> n;
 
 	// tworzymy macierze AB i X
@@ -78,7 +78,7 @@ int main()
 	else
 		cout << "dzielnik zero\n";
 
-	// usuwamnie macierzy z pamiêci
+	// usuwamnie macierzy z pamiÃªci
 
 	for (i = 0; i < n; i++) delete[] AB[i];
 	delete[] AB;
