@@ -1,8 +1,8 @@
 n=1; %liczba niewiadomych
 m=1; %liczba rownan
 
-n=input('Wprowadü ilosc zmiennych ');
-m=input('Wprowadü ilosc rÛwnan ');
+n=input('Wprowad≈∫ ilosc zmiennych ');
+m=input('Wprowad≈∫ ilosc r√≥wnan ');
 
 %mats=[2,1,1,-1,3;2,1,-1,1,4;1,1,1,1,10;-1,2,-1,1,3];
 mats=zeros(n,m);
