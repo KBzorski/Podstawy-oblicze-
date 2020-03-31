@@ -1,15 +1,17 @@
 clear all
 
-%% Deklaracja rÛwnania w postaci funkcji oraz jego pochodnej 
+%% Deklaracja r√≥wnania w postaci funkcji oraz jego pochodnej 
 syms x x2
 %f= x + log10(x)-(sin(x))^2;
 f= x^2 + log10(x)-sin(x);
 
-f2= x2 + log10(x2)-(sin(x2))^2;
+%f2= x2 + log10(x2)-(sin(x2))^2;
+f2= x2^2 + log10(x2)-sin(x2);
+
 df=diff(f);
 ddf=diff(f,2);
 
-%% Deklaracja prezyzji wyniku oraz ograniczeÒ dziedziny
+%% Deklaracja prezyzji wyniku oraz ogranicze≈Ñ dziedziny
 a=1;
 b=10;
 precision=0.0001;
@@ -20,7 +22,7 @@ wynik=0;
 si=0;
 counter=0;
 
-%% Sprawdzanie znakÛw pierwszej oraz drugiej pochodnej funkcji
+%% Sprawdzanie znak√≥w pierwszej oraz drugiej pochodnej funkcji
 if sign(subs(df))==sign(subs(ddf))
     x=a;
     si=1;
@@ -29,7 +31,7 @@ else
     si=0;
 end
 
-%% PÍtla rozwiπzywujπca rÛwnanie metodπ regu≥y-falsi
+%% Pƒôtla rozwiƒÖzywujƒÖca r√≥wnanie metodƒÖ regu≈Çy-falsi
 for i=0:100
     if abs(tmpx-x)>precision && x>0 %x musi byc wiekszy od zera, aby obliczyc z niego logarytm
         if si==1
@@ -49,7 +51,7 @@ for i=0:100
     end
 end
 
-%% Wyúwietlenie wynikÛw
+%% Wy≈õwietlenie wynik√≥w
     wynik=double(subs(f));
     disp("x=")
     disp(double(x))
